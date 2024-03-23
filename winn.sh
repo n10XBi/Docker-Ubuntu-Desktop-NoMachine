@@ -5,44 +5,24 @@ stty susp undef
 
 clear
 rm -rf ngrok ngrok.zip ng.sh > /dev/null 2>&1
-echo "======================================="
-echo "        Selamat Datang di GenDev       "
-echo "  (Skrip Ubuntu yang Keren & Kreatif)  "
-echo "======================================="
-echo "Mengunduh ngrok..."
-echo "======================================="
-wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
-tar -xvzf ngrok.tgz > /dev/null 2>&1
-echo "======================================="
-echo "Skrip Ubuntu Gendev telah berhasil dijalankan!"
-echo "Proses unduhan dan konfigurasi ngrok telah selesai."
-echo "Terima kasih telah menggunakan skrip ini."
-
-#!/bin/bash
-stty intr ""
-stty quit ""
-stty susp undef
-
-clear
-rm -rf ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "======================="
 echo "Mengunduh ngrok..."
 echo "======================="
-wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip > /dev/null 2>&1
+wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.tgz > /dev/null 2>&1
 tar -xvzf ngrok.tgz > /dev/null 2>&1
 echo "===================================="
-echo "Selamat datang di Skrip Ubuntu Gendev"
+echo "Selamat datang di Skrip Ubuntu GenDev"
 echo "===================================="
 echo "Skrip ini digunakan untuk ..."
 echo "Proses unduhan dan konfigurasi ngrok telah selesai."
 echo "Terima kasih telah menggunakan skrip ini."
 
-ubah link linux menjadi windows
-sesuai kan dengan ini
+# Ganti URL GitHub dengan teks yang diminta
 wget -O ng.sh https://github.com/n10XBi/Docker-Ubuntu-Desktop-NoMachine/raw/main/ngrok.sh > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
 
+# Fungsi 'goto' dan bagian ngrok
 function goto
 {
     label=$1
@@ -59,6 +39,7 @@ echo "Buka: https://dashboard.ngrok.com/get-started/your-authtoken"
 read -p "Tempelkan Authtoken Ngrok: " CRP
 ./ngrok config add-authtoken $CRP 
 clear
+echo "Repo: https://github.com/kmille36/Docker-Ubuntu-Desktop-NoMachine"
 echo "GenDev Fork Repo: 💥https://github.com/n10XBi/Docker-Ubuntu-Desktop-NoMachine💥"
 echo "======================="
 echo "Pilih wilayah Ngrok (untuk koneksi yang lebih baik)."
@@ -83,4 +64,6 @@ curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*publ
 echo Pengguna: 1
 echo Kata sandi: 1
 echo "VM tidak dapat terhubung? Mulai ulang Cloud Shell lalu jalankan ulang skrip."
-seq 1 43200 | while read i; do echo -en "\r Menjalankan .     $i detik / 43200 detik";sleep 0.1;echo -en "\r Menjalankan ..    $i detik / 43200 detik";sleep 0.1;echo -en "\r Menjalankan ...   $i detik / 43200 detik";sleep 0.1;echo -en "\r Menjalankan ....  $i detik / 43200 detik";sleep 0.1;echo -en "\r Menjalankan ..... $i detik / 43200 detik";sleep 0.1;echo -en "\r Menjalankan     . $i detik / 43200 detik";sleep 0.1;echo -en "\r Menjalankan  .... $i detik / 43200 detik";sleep 0.1;echo -en "\r Menjalankan   ... $i detik / 43200 detik";sleep 0.1;echo -en "\r Menjalankan    .. $i detik / 43200 detik";sleep 0.1;echo -en "\r Menjalankan     . $i detik / 43200 detik";sleep 0.1; done
+
+# Perulangan tanpa batas
+while true; do echo -en "\r Menjalankan .";sleep 0.1;echo -en "\r Menjalankan ..";sleep 0.1;echo -en "\r Menjalankan ...";sleep 0.1;echo -en "\r Menjalankan ....";sleep 0.1;echo -en "\r Menjalankan .....";sleep 0.1;echo -en "\r Menjalankan     .";sleep 0.1;echo -en "\r Menjalankan  ....";sleep 0.1;echo -en "\r Menjalankan   ...";sleep 0.1;echo -en "\r Menjalankan    ..";sleep 0.1;echo -en "\r Menjalankan     .";sleep 0.1; done
